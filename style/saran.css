@@ -1,0 +1,70 @@
+form{
+    background-color: rgba(245, 245, 245, 0.9);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(27, 12, 12, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+form{
+    margin-bottom:  15px;
+    color: #333;
+    font-size: 24px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+    
+}
+.button-kirim{
+    background-color: rgb(12, 12, 59);
+    cursor: pointer;
+    font-weight: bold;
+    transition: baground-color 0.3s ease;
+    animation: fadeIn 1s ease-out;
+    color: white;
+    
+
+}
+
+.button-kirim {
+
+    background: linear-gradient(to right, #888, #aaa);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    flex: 1;
+    transition: transform 0.3s ease, background 0.3s ease;
+    
+
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+button.btn-logrep {
+    background-color: #315bd0;
+    color: white;
+    justify-content: center;
+
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+/* Animasi */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,79 @@
+/* Slideshow Container */
+.slideshow-container {
+    width: 100%; /* Mengisi lebar kontainer */
+    max-width: 1200px; /* Membatasi lebar maksimum untuk layar besar */
+    margin: 10px auto; /* Pemusatan */
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 16 / 9; /* Rasio 16:9 */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    max-height: 300px;       /* Batasi tinggi maksimum */
+    object-fit: cover;       /* Menyesuaikan proporsi gambar */
+    display: block;    
+}
+
+/* Fallback untuk browser yang tidak mendukung aspect-ratio */
+@supports not (aspect-ratio: 16 / 9) {
+    .slideshow-container {
+        height: 0;
+        padding-bottom: 56.25%; /* 9/16 = 56.25% */
+    }
+    .slides {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Slides Wrapper */
+.slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Individual Slide */
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Gambar menyesuaikan tanpa distorsi */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    transform: translateX(100%); /* Awalnya di kanan */
+    opacity: 0;
+}
+
+/* Gambar yang aktif (tengah) */
+.slide.active {
+    transform: translateX(0); /* Posisi tengah */
+    opacity: 1;
+}
+
+/* Gambar yang akan muncul berikutnya atau sudah lewat */
+.slide.next,
+.slide.previous {
+    transform: translateX(100%); /* Siap di kanan */
+    opacity: 0;
+}
+
+/* Styling untuk gambar */
+.img-responsive {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Efek hover untuk gambar */
+.img-responsive:hover {
+    transform: scale(1.04);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}

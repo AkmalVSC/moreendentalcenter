@@ -1,0 +1,83 @@
+/* Gaya untuk heading */
+.style1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+h1.style1 {
+    color: black;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 35px;
+    font-style: italic;
+}
+
+/* Kontainer galeri untuk scroll horizontal */
+.gallery-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 15px;
+    gap: 15px;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+/* Gaya untuk gambar */
+.img-thumbnail {
+    flex: 0 0 auto;
+    width: 500px;
+    height: auto;
+    max-width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s, filter 0.3s;
+}
+
+/* Efek hover */
+.img-thumbnail:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Gaya untuk tombol scroll */
+.scroll-buttons {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.scroll-btn {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.scroll-btn:hover {
+    background-color: #555;
+}
+
+.scroll-btn:focus {
+    outline: none;
+}
+
+/* Menghilangkan scrollbar default */
+.gallery-container::-webkit-scrollbar {
+    height: 8px;
+}
+.gallery-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.gallery-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

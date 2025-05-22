@@ -1,0 +1,168 @@
+/* Background utama */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    background-image: url('/pakar/gambar/bg-gigi.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Container utama */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Judul halaman */
+.style1 {
+    color: #2c3e50;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: 600;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+}
+
+/* Tabel daftar penyakit */
+.table {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+
+.table tr.info {
+    background-color: #3498db !important;
+    color: rgb(0, 0, 0);
+}
+
+.table th, .table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Tombol aksi */
+.btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-success {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.btn-success:hover {
+    background-color: #27ae60;
+}
+
+/* Tombol Edit dan Hapus */
+.btn-primary, .btn-danger {
+    width: 80px; /* Lebar yang sama */
+    padding: 8px 0; /* Padding vertikal sama */
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-danger {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+.btn-default {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+}
+
+.btn-default:hover {
+    background-color: #bdc3c7;
+}
+
+/* Modal konfirmasi */
+.modal-content {
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background-color: #3498db;
+    color: white;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 15px;
+    border-bottom: 1px solid #2980b9;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+.modal-body {
+    padding: 20px;
+    font-size: 16px;
+}
+
+.modal-footer {
+    padding: 15px;
+    border-top: 1px solid #eaeaea;
+    text-align: right;
+}
+
+/* Responsif untuk mobile */
+@media (max-width: 768px) {
+    .table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .btn-primary, .btn-danger {
+        width: 100%; /* Full width di mobile */
+    }
+}
